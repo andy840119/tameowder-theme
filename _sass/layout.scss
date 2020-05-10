@@ -2,6 +2,47 @@
 // The basic two column layout
 //
 
+.banner-header {
+  color: $banner-color;
+  text-align: left;
+  background-color: $banner-background-color;
+  background-image: url('../images/header.jpg');
+  // enable to adjust customize width and height
+  position: relative;
+  height: 180px;
+  // let header can in center
+  margin: auto;
+  // adjust inner font
+  padding-left: 15px;
+  padding-top: 80px;
+
+  @include mq(lg) {
+    // in large view, max width is 80 rem
+    max-width: 80rem;
+  }
+
+  @include mq(md) {
+    padding: 2rem 1rem;
+  }
+
+  .project-name {
+    margin-top: 0;
+    margin-bottom: 0;
+  
+    @include mq(lg) {
+      font-size: 2.75rem;
+    }
+  
+    @include mq(md) {
+      font-size: 2.25rem;
+    }
+  
+    @include mq(sm) {
+      font-size: 1.75rem;
+    }
+  }
+}
+
 .page-wrap {
   @include mq(md) {
     position: absolute;
