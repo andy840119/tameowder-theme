@@ -41,6 +41,20 @@
       font-size: 1.75rem;
     }
   }
+
+  h1,
+  h2{
+    font-weight: bold;
+    color: $white;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6{
+    color: $banner-subtext-color;
+    margin: auto;
+  }
 }
 
 .page-wrap {
