@@ -88,16 +88,12 @@
   z-index: 100;
   display: flex;
   flex-wrap: wrap;
-  background-color: $sidebar-color;
 
   @include mq(md) {
-    flex-wrap: nowrap;
     position: absolute;
-    width: $nav-width-md;
-    height: 100%;
-    flex-direction: column;
-    border-right: $border $border-color;
-    align-items: flex-end;
+    width: 16rem;
+    padding-top: 20px;
+    float: left;
   }
 
   @include mq(lg) {
