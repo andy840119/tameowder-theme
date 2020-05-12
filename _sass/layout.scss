@@ -12,17 +12,17 @@
   height: 180px;
   // let header can in center
   margin: auto;
-  // adjust inner font
-  padding-left: 15px;
-  padding-top: 80px;
+  // padding
+  padding: 2rem 1rem;
 
   @include mq(lg) {
     // in large view, max width is 80 rem
     max-width: 80rem;
   }
 
-  @include mq(md) {
-    padding: 2rem 1rem;
+  @include mq(sm) {
+    padding-left: 15px;
+    padding-top: 80px;
   }
 
   .project-name {
