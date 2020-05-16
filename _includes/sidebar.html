@@ -1,0 +1,36 @@
+<!--title-->
+<div class="site-header">
+    <a href="{{ site.url }}{{ site.baseurl }}" class="site-title lh-tight">{% include title.html %}</a>
+    <button class="menu-button fs-3 js-main-nav-trigger" data-text-toggle="Hide" type="button">Menu</button>
+</div>
+
+<!--manu-->
+<div class="navigation main-nav js-main-nav">
+    <!--navigation-->
+    <p class="navigation-title">Navigation</p>
+    {% include nav.html %}
+</div>
+
+<!--ads-->
+<div class="navigation main-nav js-main-nav">
+    <!--facebook like-->
+    {% if include.content.facebook_url %}
+        <p class="navigation-title">Facebook</p>
+        <iframe src="//www.facebook.com/plugins/likebox.php?href={{ include.content.facebook_url }}&amp;width=260&amp;height=240&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" 
+            scrolling="no" 
+            frameborder="0" 
+            style="height:240px;" 
+            allowtransparency="true">
+        </iframe>
+    {% endif %}
+
+    <!--discord channel-->
+    {% if include.content.discord_id %}
+        <p class="navigation-title">Discord</p>
+        <iframe src="https://discordapp.com/widget?id={{ include.content.discord_id }}&amp;theme=dark" 
+        width="260" 
+        height="320" 
+        frameborder="0">
+        </iframe>
+    {% endif %}
+</div>
