@@ -92,7 +92,6 @@
   @include mq(md) {
     position: absolute;
     width: $nav-width-md;
-    padding-top: 20px;
     float: left;
   }
 
@@ -193,10 +192,7 @@
   align-items: center;
 
   @include mq(md) {
-    z-index: 101;
-    height: $header-height;
-    max-height: $header-height;
-    border-bottom: $border $border-color;
+    display: none;
   }
 }
 
