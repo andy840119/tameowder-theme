@@ -83,6 +83,8 @@
 
   @include mq(md) {
     width: $search-results-width;
+    max-height: 200px;
+    overflow: auto;
   }
 }
 
