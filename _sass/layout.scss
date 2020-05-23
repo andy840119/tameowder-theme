@@ -83,6 +83,13 @@
     font-size: 1rem;
   }
 }
+.wrapper {
+  @include mq(md) {
+    // to let page wrap's height is all children's height
+    display: flex;
+    flex-flow: row;
+  }
+}
 
 .side-bar {
   z-index: 100;
@@ -90,9 +97,7 @@
   flex-wrap: wrap;
 
   @include mq(md) {
-    position: absolute;
     width: $nav-width-md;
-    padding-top: 20px;
     float: left;
   }
 
@@ -117,13 +122,6 @@
   @include mq(md) {
     position: relative;
     max-width: $content-width;
-    margin-left: $nav-width-md;
-  }
-
-  @include mq(lg) {
-    margin-left: calc(
-      (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-    );
   }
 }
 
@@ -180,7 +178,7 @@
   @include container;
 
   @include mq(md) {
-    padding-top: $sp-8;
+    padding-top: $sp-6;
     padding-bottom: $gutter-spacing-sm;
     overflow-y: auto;
     flex: 1 1 auto;
@@ -193,10 +191,7 @@
   align-items: center;
 
   @include mq(md) {
-    z-index: 101;
-    height: $header-height;
-    max-height: $header-height;
-    border-bottom: $border $border-color;
+    display: none;
   }
 }
 
