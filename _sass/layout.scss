@@ -76,6 +76,10 @@
   @include mq(md) {
     padding: 2rem 4rem;
     font-size: 1.1rem;
+
+    // to let page wrap's height is all children's height
+    display: flex;
+    flex-flow: row;
   }
 
   @include mq(sm) {
@@ -90,7 +94,6 @@
   flex-wrap: wrap;
 
   @include mq(md) {
-    position: absolute;
     width: $nav-width-md;
     float: left;
   }
