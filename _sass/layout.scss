@@ -93,7 +93,6 @@
 
 .side-bar {
   z-index: 100;
-  display: inherit;
   flex-wrap: wrap;
 
   @include mq(md) {
