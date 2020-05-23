@@ -76,15 +76,18 @@
   @include mq(md) {
     padding: 2rem 4rem;
     font-size: 1.1rem;
-
-    // to let page wrap's height is all children's height
-    display: flex;
-    flex-flow: row;
   }
 
   @include mq(sm) {
     padding: 2rem 1rem;
     font-size: 1rem;
+  }
+}
+.wrapper {
+  @include mq(md) {
+    // to let page wrap's height is all children's height
+    display: flex;
+    flex-flow: row;
   }
 }
 
@@ -119,13 +122,6 @@
   @include mq(md) {
     position: relative;
     max-width: $content-width;
-    margin-left: $nav-width-md;
-  }
-
-  @include mq(lg) {
-    margin-left: calc(
-      (100% - #{$nav-width + $content-width}) / 2 + #{$nav-width}
-    );
   }
 }
 
