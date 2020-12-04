@@ -1,6 +1,10 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  
+  {% if site.google_verify %}
+    <meta name="google-site-verification" content="{{ site.google_verify }}">
+  {% endif %}
 
   {% if site.plugins.jekyll-seo == nil %}
     <title>{{ page.title }} - {{ site.title }}</title>
